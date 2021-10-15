@@ -12,24 +12,22 @@ def title():
 '%': Modulo operator\n""")
 
 def varCheck(string):
-	if '=' in string:
-		string = string.split('=')
-		for i in range(len(string)):
-			string[i] = string[i].replace(" ", "")
+	if '(' in string:
+		string = string.replace('(', '')
+		string = string.replace(')', '')
+	for op in ['=', '+', '-', '/', '*', '%']:
+		if op in string:
+			string = string.split(op)
+			for char in range(len(string)):
+				string[char] = string[char].replace(" ", "")
 
-		if len(string[0]) == 1:
+			if len(string[0]) == 1:
+				return True
+			elif string[0].isdigit():
+				return True
+			return False
+		elif len(string) == 1:
 			return True
-		return False
-	elif '+' in string:
-		string = string.split('+')
-		for i in range(len(string)):
-			string[i] = string[i].replace(" ", "")
-
-		if len(string[0]) == 1:
-			return True
-		return False
-	elif len(string) == 1:
-		return True
 	return False
 
 def start():
