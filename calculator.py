@@ -41,6 +41,7 @@ def start():
 		if calc.lower() == 'quit':
 			break
 		
+		calc = calc.replace(' ', '')
 		var = varCheck(calc)
 
 		if not var:
