@@ -13,17 +13,12 @@ f = 9 / 3
 All of those definitions are allowed because they all have; a one character variable name, an equals sign, and a value or expression. However,
 ```python
 num = 8
- g = 6
 n = &4
 a = *+
 ```
 are all illegal.
 `num = 8`
 Is illegal because the variable name has more than one character
-```python
- g = 6
-```
-Is illegal because it has a space in front of it.
 ```python
 n = &4
 ```
