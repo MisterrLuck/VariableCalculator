@@ -5,11 +5,12 @@ def title():
 	print("To quit, type 'quit' or use Ctrl + D.")
 	print("To use normal operators, use this chart:")
 	print("""
-'+': Plus sign
-'-': Minus sign
-'*': Multiplication sign
-'/': Division sign
-'%': Modulo operator\n""")
+'+':  Plus sign
+'-':  Minus sign
+'*':  Multiplication sign
+'/':  Division sign
+'%':  Modulo operator
+'//': Floor division\n""")
 
 def varCheck(string):
 	if '(' in string:
